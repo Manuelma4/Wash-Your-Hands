@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+    
+    
+    
+
+    <EditText
+        android:id="@+id/localidadEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:hint="Insegrese el nombre de la localidad"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="14dp" />
+
+
+    <EditText
+        android:id="@+id/numberoLavadoEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/localidadEditText"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="78dp"
+        android:ems="10"
+        android:hint="Ingrese el # de lavados"
+        android:inputType="number"
+        android:layout_alignLeft="@+id/localidadEditText" />
+
+    <Button
+        android:id="@+id/btnInsert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numberoLavadoEditText"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="-89dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="25dp"
+        android:text="Insert"
+        tools:ignore="UnknownId" />
+
+    <TextView
+        android:id="@+id/MensajePorcentaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/FotoApoyo"
+        android:layout_marginTop="-14dp"
+        android:text="Tu porcentaje de lavado de manos es:" />
+
+    <ProgressBar
+        android:id="@+id/p"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/MensajePorcentaje"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="93dp"
+        android:layout_marginLeft="93dp"
+        android:layout_marginTop="533dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:minWidth="200dp"
+        android:minHeight="50dp"
+        android:progress="1" />
+
+    <TextView
+        android:id="@+id/t"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/p"
+        android:layout_below="@+id/p"
+        android:layout_alignLeft="@+id/p" />
+
+
+    <!--Navigation on bottom-->
+    <ImageView
+        android:id="@+id/FotoApoyo"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/numberoLavadoEditText"
+        android:src="@drawable/mensajeapoyo" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        app:itemBackground="@color/colorPrimary"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_navigation"
+        android:layout_alignParentBottom="true"/>
+
+
+
+</RelativeLayout>
